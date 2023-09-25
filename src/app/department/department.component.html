@@ -1,0 +1,63 @@
+<!-- <div> 
+    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)" > 
+       <input type= "text"  name="userName" placeholder="userName" 
+          formControlName = "userName"> 
+       <br/>
+       <br/>
+       <input type="submit"  value="Click here"> 
+    </form>
+ </div> 
+ <p> Textbox result is: {{userName}} </p> -->
+ <div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+      
+  
+      <form method="POST" [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+        <div class="formbold-form-title">
+          <h2 class="">Department Information</h2>
+        </div>
+  
+       
+        <div class="formbold-mb-3">
+          <label for="code" class="formbold-form-label">
+            code
+          </label>
+          <input
+            type="text"
+            name="code"
+            id="code"
+            class="formbold-form-input"
+            formControlName="code"
+          />
+        </div>
+  
+        <div class="formbold-mb-3">
+          <label for="name" class="formbold-form-label">
+                name
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="formbold-form-input"
+            formControlName="name"
+          />
+        </div>
+        <div class="formbold-mb-3">
+            <label for="description" class="formbold-form-label">
+              description
+            </label>
+            <input
+              type="text"
+              name="description"
+              id="description"
+              class="formbold-form-input"
+              formControlName="description"
+            />
+          </div>
+          <button type="reset" (click)="OnClear()" class="formbold-btn">Clear</button>
+        <input type="submit" class="formbold-btn" value="Save" >
+      </form>
+    </div>
+  </div>
+
